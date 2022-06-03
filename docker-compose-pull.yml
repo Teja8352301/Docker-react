@@ -1,0 +1,7 @@
+version: '3'
+services:
+  react:
+    image: teja8352/teja-react
+    ports:
+      - "8080:80"
+    
