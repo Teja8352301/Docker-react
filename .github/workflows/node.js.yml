@@ -44,7 +44,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
           push: true
-          tags: teja8352/teja_8352:latest
+          tags: teja8352/teja-react:latest
     
 #     - name: Build & push Docker image
 #       uses: mr-smithers-excellent/docker-build-push@v4
