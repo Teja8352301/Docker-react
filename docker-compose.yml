@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  react:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+       - /app/react/node_modules
+       - .:/app/react
+    
