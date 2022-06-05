@@ -1,13 +1,18 @@
 {
-    "AWSEBDockerrunVersion": "1",
-    "Image": {
-        "Name": "teja8352/teja-react:latest",
-        "Update": "true"
-    },
-    "Ports": [
+    "AWSEBDockerrunVersion": "3",
+    "containerDefinitions":[
         {
-            "ContainerPort": "80"
+            "name":"nginx-react",
+            "image":"teja8352/teja-react:latest",
+            "hostname":"nginx",
+            "essential":"true",
+            "portMapping":[
+                {
+                    "hostPort":80,
+                    "containerPort":80
+                }
+            ],
+            "memory":100
         }
-    ],
-    "Logging": "/var/log/nginx"
+    ]
 }
