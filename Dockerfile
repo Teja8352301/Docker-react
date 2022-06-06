@@ -1,8 +1,8 @@
-FROM node:18-alpine3.14 as builder
+FROM node:18-alpine3.14
 
 WORKDIR /app/react
 
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install
 
@@ -14,4 +14,4 @@ FROM nginx
 
 EXPOSE 80
 
-COPY --from=builder /app/react/build /usr/share/nginx/html
+COPY --from=0 /app/react/build /usr/share/nginx/html
